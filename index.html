@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>WJI Telangana</title>
+
+  <!-- External CSS -->
+  <link rel="stylesheet" href="style.css">
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<header class="navbar">
+  <div class="container nav-container">
+
+    <h2 class="logo">WJI Telangana</h2>
+
+    <!-- MENU TOGGLE -->
+    <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+
+    <nav>
+      <ul class="nav-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#gallery">Gallery</a></li>
+        <li><a href="#activities">Activities</a></li>
+        <li><a href="#members">Members</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+
+  </div>
+</header>
+
+<!-- HOME -->
+<section id="home" class="section hero">
+  <div class="container">
+
+    <h1>Working Journalists of India – Telangana</h1>
+    <h3>Voice of Truth, Power of Journalism</h3>
+
+    <p>
+      Supporting, protecting, and empowering journalists across Telangana.
+    </p>
+
+    <!-- CTA BUTTONS (NEW) -->
+    <div style="margin-top:20px;">
+      <a href="#contact" class="btn btn-primary">Join Us</a>
+      <a href="#about" class="btn btn-outline">Learn More</a>
+    </div>
+
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about" class="section">
+  <div class="container">
+
+    <h2>About WJI Telangana</h2>
+
+    <p>
+      A professional body uniting journalists from print, electronic, and digital media,
+      committed to truth, transparency, and accountability.
+    </p>
+
+    <div class="card-grid">
+
+      <div class="card">
+        <h3>Our Mission</h3>
+        <ul>
+          <li>Protect journalist rights</li>
+          <li>Promote ethical journalism</li>
+          <li>Support media professionals</li>
+          <li>Strengthen journalist voices</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <h3>Our Vision</h3>
+        <p>
+          Build a united and independent journalist community contributing
+          to a fair and informed society.
+        </p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- GALLERY -->
+<section id="gallery" class="section light">
+  <div class="container">
+
+    <h2>Gallery</h2>
+
+    <div class="gallery-grid">
+      <img src="https://via.placeholder.com/300" alt="">
+      <img src="https://via.placeholder.com/300" alt="">
+      <img src="https://via.placeholder.com/300" alt="">
+    </div>
+
+  </div>
+</section>
+
+<!-- ACTIVITIES -->
+<section id="activities" class="section">
+  <div class="container">
+
+    <h2>Activities</h2>
+
+    <ul class="list">
+      <li>Press Meets</li>
+      <li>Training Workshops</li>
+      <li>Awareness Campaigns</li>
+      <li>Welfare Programs</li>
+    </ul>
+
+    <h3>Recent Activities</h3>
+
+    <div class="table-container">
+      <table>
+        <tr>
+          <th>Date</th>
+          <th>Activity</th>
+          <th>Location</th>
+          <th>Description</th>
+        </tr>
+        <tr>
+          <td>10 Mar 2026</td>
+          <td>Press Meet</td>
+          <td>Hyderabad</td>
+          <td>Media awareness program</td>
+        </tr>
+      </table>
+    </div>
+
+  </div>
+</section>
+
+<!-- MEMBERS -->
+<section id="members" class="section light">
+  <div class="container">
+
+    <h2>Members</h2>
+
+    <div class="card-grid">
+      <div class="card">Ravi Kumar – Reporter</div>
+      <div class="card">Sita Devi – Editor</div>
+    </div>
+
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="section">
+  <div class="container">
+
+    <h2>Contact Us</h2>
+
+    <p>Hyderabad, Telangana</p>
+    <p>📞 +91 XXXXX XXXXX</p>
+    <p>✉️ wji.telugu@gmail.com</p>
+
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <p>© 2026 WJI Telangana</p>
+</footer>
+
+<!-- =========================
+     SCRIPTS (ALL IN ONE)
+========================= -->
+<script>
+
+/* MOBILE MENU TOGGLE */
+function toggleMenu() {
+  document.querySelector('.nav-links').classList.toggle('active');
+}
+
+/* STICKY NAVBAR EFFECT */
+window.addEventListener("scroll", function () {
+  const navbar = document.querySelector(".navbar");
+
+  if (window.scrollY > 50) {
+    navbar.style.background = "rgba(30, 58, 138, 0.95)";
+    navbar.style.boxShadow = "0 4px 20px rgba(0,0,0,0.15)";
+  } else {
+    navbar.style.background = "rgba(30, 58, 138, 0.9)";
+    navbar.style.boxShadow = "0 2px 10px rgba(0,0,0,0.1)";
+  }
+});
+
+/* FADE-IN ANIMATION */
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add("show");
+    }
+  });
+});
+
+document.querySelectorAll(".section").forEach(section => {
+  section.classList.add("fade-in");
+  observer.observe(section);
+});
+
+</script>
+
+</body>
+</html>
