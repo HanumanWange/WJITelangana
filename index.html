@@ -5,10 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>WJI Telangana</title>
 
-  <!-- External CSS -->
   <link rel="stylesheet" href="style.css">
 
-  <!-- Google Font -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 </head>
 
@@ -17,10 +15,8 @@
 <!-- NAVBAR -->
 <header class="navbar">
   <div class="container nav-container">
-
     <h2 class="logo">WJI Telangana</h2>
 
-    <!-- MENU TOGGLE -->
     <div class="menu-toggle" onclick="toggleMenu()">☰</div>
 
     <nav>
@@ -33,14 +29,12 @@
         <li><a href="#contact">Contact</a></li>
       </ul>
     </nav>
-
   </div>
 </header>
 
-<!-- HOME -->
+<!-- HERO -->
 <section id="home" class="section hero">
   <div class="container">
-
     <h1>Working Journalists of India – Telangana</h1>
     <h3>Voice of Truth, Power of Journalism</h3>
 
@@ -48,19 +42,17 @@
       Supporting, protecting, and empowering journalists across Telangana.
     </p>
 
-    <!-- CTA BUTTONS (NEW) -->
-    <div style="margin-top:20px;">
+    <!-- FIXED BUTTONS -->
+    <div style="margin-top:20px; display:flex; gap:15px; justify-content:center;">
       <a href="#contact" class="btn btn-primary">Join Us</a>
       <a href="#about" class="btn btn-outline">Learn More</a>
     </div>
-
   </div>
 </section>
 
 <!-- ABOUT -->
 <section id="about" class="section">
   <div class="container">
-
     <h2>About WJI Telangana</h2>
 
     <p>
@@ -69,7 +61,6 @@
     </p>
 
     <div class="card-grid">
-
       <div class="card">
         <h3>Our Mission</h3>
         <ul>
@@ -87,30 +78,37 @@
           to a fair and informed society.
         </p>
       </div>
-
     </div>
   </div>
 </section>
 
 <!-- GALLERY -->
+<!-- GALLERY -->
 <section id="gallery" class="section light">
   <div class="container">
-
     <h2>Gallery</h2>
 
-    <div class="gallery-grid">
-      <img src="https://via.placeholder.com/300" alt="">
-      <img src="https://via.placeholder.com/300" alt="">
-      <img src="https://via.placeholder.com/300" alt="">
-    </div>
+    <div class="carousel">
+      <button class="nav left" onclick="moveSlide(-1)">❮</button>
 
-  </div>
+      <div class="carousel-viewport">
+        <div class="carousel-track" id="track">
+          <img src="images/img1.jpg" class="slide">
+          <img src="images/img2.jpg" class="slide">
+          <img src="images/img3.jpg" class="slide">
+          <img src="images/img4.jpg" class="slide">
+          <img src="images/img5.jpg" class="slide">
+          <img src="images/img6.jpg" class="slide">
+        </div>
+      </div>
+
+      <button class="nav right" onclick="moveSlide(1)">❯</button>
+    </div>
 </section>
 
 <!-- ACTIVITIES -->
 <section id="activities" class="section">
   <div class="container">
-
     <h2>Activities</h2>
 
     <ul class="list">
@@ -138,77 +136,148 @@
         </tr>
       </table>
     </div>
-
   </div>
 </section>
 
 <!-- MEMBERS -->
 <section id="members" class="section light">
   <div class="container">
-
     <h2>Members</h2>
 
     <div class="card-grid">
       <div class="card">Ravi Kumar – Reporter</div>
       <div class="card">Sita Devi – Editor</div>
     </div>
-
   </div>
 </section>
 
 <!-- CONTACT -->
 <section id="contact" class="section">
   <div class="container">
-
     <h2>Contact Us</h2>
 
     <p>Hyderabad, Telangana</p>
     <p>📞 +91 XXXXX XXXXX</p>
     <p>✉️ wji.telugu@gmail.com</p>
-
   </div>
 </section>
 
-<!-- FOOTER -->
 <footer>
   <p>© 2026 WJI Telangana</p>
 </footer>
 
-<!-- =========================
-     SCRIPTS (ALL IN ONE)
-========================= -->
+<!-- PDF POPUP -->
+<div id="pdfPopup" class="popup-overlay">
+  <div class="popup-box">
+    <span class="close-btn" onclick="closePopup()">✖</span>
+
+    <h2>📖 ముఖ్య ప్రకటన</h2>
+
+    <p>
+      పరాభవ నామ సంవత్సర తెలుగు పంచాంగము చదవడానికి
+      క్రింది బటన్ పై క్లిక్ చేయండి
+    </p>
+
+    <a href="panchangam.pdf" target="_blank" class="btn btn-primary">
+      Open PDF
+    </a>
+  </div>
+</div>
+
 <script>
 
-/* MOBILE MENU TOGGLE */
+/* MENU */
 function toggleMenu() {
   document.querySelector('.nav-links').classList.toggle('active');
 }
-
-/* STICKY NAVBAR EFFECT */
+/* FIXED NAVBAR COLOR (SYNC WITH THEME) */
 window.addEventListener("scroll", function () {
   const navbar = document.querySelector(".navbar");
 
   if (window.scrollY > 50) {
-    navbar.style.background = "rgba(30, 58, 138, 0.95)";
-    navbar.style.boxShadow = "0 4px 20px rgba(0,0,0,0.15)";
+    navbar.style.background = "linear-gradient(to right, var(--gradient-start), var(--primary-hover))";
+    navbar.style.boxShadow = "0 4px 20px rgba(249,115,22,0.3)";
   } else {
-    navbar.style.background = "rgba(30, 58, 138, 0.9)";
-    navbar.style.boxShadow = "0 2px 10px rgba(0,0,0,0.1)";
+    navbar.style.background = "linear-gradient(to right, var(--gradient-start), var(--gradient-mid))";
+    navbar.style.boxShadow = "0 2px 10px rgba(249,115,22,0.2)";
   }
 });
 
-/* FADE-IN ANIMATION */
+/* FADE */
 const observer = new IntersectionObserver((entries) => {
   entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      entry.target.classList.add("show");
-    }
+    if (entry.isIntersecting) entry.target.classList.add("show");
   });
 });
 
 document.querySelectorAll(".section").forEach(section => {
   section.classList.add("fade-in");
   observer.observe(section);
+});
+
+/* POPUP */
+function closePopup() {
+  document.getElementById("pdfPopup").style.display = "none";
+}
+
+window.onload = function() {
+  document.getElementById("pdfPopup").style.display = "flex";
+};
+
+/* ===== CAROUSEL (CENTER + LOOP) ===== */
+
+const track = document.getElementById("track");
+let slides = Array.from(document.querySelectorAll(".slide"));
+
+let currentIndex = 1;
+
+// Clone for infinite loop
+const firstClone = slides[0].cloneNode(true);
+const lastClone = slides[slides.length - 1].cloneNode(true);
+
+track.appendChild(firstClone);
+track.insertBefore(lastClone, slides[0]);
+
+slides = Array.from(document.querySelectorAll(".slide"));
+
+function updateCarousel(animate = true) {
+  const slideWidth = slides[0].offsetWidth + 30; // adjust if needed
+  const centerOffset = (window.innerWidth / 2) - (slideWidth / 2);
+
+  track.style.transition = animate ? "transform 0.5s ease" : "none";
+
+  track.style.transform =
+    `translateX(${-currentIndex * slideWidth + centerOffset}px)`;
+
+  slides.forEach((slide, i) => {
+    slide.classList.toggle("active", i === currentIndex);
+  });
+}
+
+function moveSlide(direction) {
+  currentIndex += direction;
+  updateCarousel();
+
+  setTimeout(() => {
+    if (currentIndex === 0) {
+      currentIndex = slides.length - 2;
+      updateCarousel(false);
+    }
+    if (currentIndex === slides.length - 1) {
+      currentIndex = 1;
+      updateCarousel(false);
+    }
+  }, 500);
+}
+
+/* INIT AFTER PAGE LOAD */
+window.addEventListener("load", () => {
+  updateCarousel(false);
+});
+
+/* FIX ON RESIZE */
+window.addEventListener("resize", () => {
+  updateCarousel(false);
 });
 
 </script>
