@@ -9,7 +9,22 @@
 
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 </head>
+<style>
+/* .card_pos {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+} */
 
+/* Optional: Add styling to see the centering effect */
+.center_pos {
+  border: 1px solid #ccc;
+  padding: 20px;
+  min-height: 200px;
+}
+</style>
 <body>
 
 <!-- NAVBAR -->
@@ -50,6 +65,30 @@
   </div>
 </section>
 
+<!-- GALLERY -->
+<!-- GALLERY -->
+<section id="gallery" class="section light">
+  <div class="container">
+    <h2>Gallery</h2>
+
+    <div class="carousel">
+      <button class="nav left" onclick="moveSlide(-1)">❮</button>
+
+      <div class="carousel-viewport">
+        <div class="carousel-track" id="track">
+          <img src="images/1.jfif" class="slide">
+          <img src="images/3.jfif" class="slide">
+          <img src="images/40.jfif" class="slide">
+          <img src="images/90.jfif" class="slide">
+          <img src="images/25.jfif" class="slide">
+          <img src="images/60.jfif" class="slide">
+        </div>
+      </div>
+
+      <button class="nav right" onclick="moveSlide(1)">❯</button>
+    </div>
+</section>
+
 <!-- ABOUT -->
 <section id="about" class="section">
   <div class="container">
@@ -82,29 +121,7 @@
   </div>
 </section>
 
-<!-- GALLERY -->
-<!-- GALLERY -->
-<section id="gallery" class="section light">
-  <div class="container">
-    <h2>Gallery</h2>
 
-    <div class="carousel">
-      <button class="nav left" onclick="moveSlide(-1)">❮</button>
-
-      <div class="carousel-viewport">
-        <div class="carousel-track" id="track">
-          <img src="images/img1.jpg" class="slide">
-          <img src="images/img2.jpg" class="slide">
-          <img src="images/img3.jpg" class="slide">
-          <img src="images/img4.jpg" class="slide">
-          <img src="images/img5.jpg" class="slide">
-          <img src="images/img6.jpg" class="slide">
-        </div>
-      </div>
-
-      <button class="nav right" onclick="moveSlide(1)">❯</button>
-    </div>
-</section>
 
 <!-- ACTIVITIES -->
 <section id="activities" class="section">
@@ -143,10 +160,40 @@
 <section id="members" class="section light">
   <div class="container">
     <h2>Members</h2>
+    
 
     <div class="card-grid">
-      <div class="card">Ravi Kumar – Reporter</div>
-      <div class="card">Sita Devi – Editor</div>
+      <div class="card" style="text-align: center; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); padding: 20px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); margin: 10px; transition: transform 0.3s ease;" 
+     onmouseover="this.style.transform='translateY(-5px)'" 
+     onmouseout="this.style.transform='translateY(0)'">
+  <p style="font-weight: bold; font-size: 18px; color: white; margin: 0 0 8px 0;">Rana Pratap</p>
+  <p style="color: #f0f0f0; margin: 0;">President</p>
+</div>
+
+<div class="card" style="text-align: center; background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%); padding: 20px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); margin: 10px; transition: transform 0.3s ease;"
+     onmouseover="this.style.transform='translateY(-5px)'"
+     onmouseout="this.style.transform='translateY(0)'">
+  <p style="font-weight: bold; font-size: 18px; color: white; margin: 0 0 8px 0;">Nandanam Krupakar</p>
+  <p style="color: #f0f0f0; margin: 0;">Hon'ble President</p>
+</div>
+
+<div class="card" style="text-align: center; background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%); padding: 20px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); margin: 10px; transition: transform 0.3s ease;"
+     onmouseover="this.style.transform='translateY(-5px)'"
+     onmouseout="this.style.transform='translateY(0)'">
+  <p style="font-weight: bold; font-size: 18px; color: white; margin: 0 0 8px 0;">Ravikanti Srinivas</p>
+  <p style="color: #f0f0f0; margin: 0;">General Secretary</p>
+</div>
+
+<div class="card" style="text-align: center; background: linear-gradient(135deg, #fa709a 0%, #fee140 100%); padding: 20px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); margin: 10px; transition: transform 0.3s ease;"
+     onmouseover="this.style.transform='translateY(-5px)'"
+     onmouseout="this.style.transform='translateY(0)'">
+  <p style="font-weight: bold; font-size: 18px; color: white; margin: 0 0 8px 0;">G. Valleeswar</p>
+  <p style="color: #f0f0f0; margin: 0;">Advisor</p>
+</div>
+      <!-- <div class="card" style="text-align: center;"><p>Rana Pratap</p> <p>President</p></div>
+      <div class="card" style="text-align: center;"><p>Nandanam Krupakar</p> <p>Hon'ble President </p> </div>
+      <div class="card" style="text-align: center;"><p>Ravikanti Srinivas</p> <p>General Secretary</p></div>
+      <div class="card" style="text-align: center;"><p>G. Valleeswar</p> <p>Advisor</p></div> -->
     </div>
   </div>
 </section>
