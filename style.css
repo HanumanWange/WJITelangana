@@ -482,24 +482,26 @@ footer {
 }
 
 .slide {
-	min-width: 35vw;
-	width: 35vw;
-	aspect-ratio: 16 / 9;
-	object-fit: cover;
+	height: 400px;
+	width: auto;
+	max-width: 85vw;
+	object-fit: contain;
 	margin: 0 15px;
 	border-radius: 12px;
 	flex-shrink: 0;
 
+	/* In-active State */
 	opacity: 0.5;
-	filter: blur(3px);
+	filter: blur(1px);
 	transform: scale(0.9);
-	transition: all 0.4s ease;
+	transition: all 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+	will-change: transform, opacity;
 }
 
 .slide.active {
 	opacity: 1;
 	filter: blur(0);
-	transform: scale(1.15);
+	transform: scale(1.05); /* Slight pop */
 	z-index: 2;
 }
 
@@ -511,12 +513,15 @@ footer {
 	background: #f97316;
 	color: white;
 	border: none;
-	padding: 10px 15px;
+	padding: 10px;
 	cursor: pointer;
 	border-radius: 50%;
 	font-size: 18px;
 	z-index: 10;
 	box-shadow: 0 4px 12px rgba(249, 115, 22, 0.3);
+	display: flex;
+	align-items: center;
+	justify-content: center;
 }
 
 .nav.left {
