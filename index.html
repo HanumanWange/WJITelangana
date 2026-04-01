@@ -11,22 +11,7 @@
 	<link rel="stylesheet" href="style.css">
 	<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 </head>
-<style>
-/* .card_pos {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-} */
 
-/* Optional: Add styling to see the centering effect */
-.center_pos {
-  border: 1px solid #ccc;
-  padding: 20px;
-  min-height: 200px;
-}
-</style>
 <body>
 
 	<!-- NAVBAR -->
@@ -67,72 +52,69 @@
 		</div>
 	</section>
 
-<!-- GALLERY -->
-<!-- GALLERY -->
-<section id="gallery" class="section light">
-  <div class="container">
-    <h2>Gallery</h2>
+	<!-- GALLERY -->
+	<section id="gallery" class="section light">
+		<div class="container">
+			<h2>Gallery</h2>
 
-    <div class="carousel">
-      <button class="nav left" onclick="moveSlide(-1)">❮</button>
+			<div class="carousel">
+				<button class="nav left" onclick="moveSlide(-1)">
+					<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-left-icon lucide-chevron-left"><path d="m15 18-6-6 6-6"/></svg>
+				</button>
 
-      <div class="carousel-viewport">
-        <div class="carousel-track" id="track">
-          <img src="images/1.jfif" class="slide">
-          <img src="images/3.jfif" class="slide">
-          <img src="images/40.jfif" class="slide">
-          <img src="images/90.jfif" class="slide">
-          <img src="images/25.jfif" class="slide">
-          <img src="images/60.jfif" class="slide">
-        </div>
-      </div>
+				<div class="carousel-viewport">
+					<div class="carousel-track" id="track">
+						<img src="images/1.jpeg" class="slide">
+						<img src="images/2.jpeg" class="slide">
+						<img src="images/3.jpeg" class="slide">
+						<img src="images/4.jpeg" class="slide">
+						<img src="images/5.jpeg" class="slide">
+						<img src="images/6.jpeg" class="slide">
+						<img src="images/7.jpeg" class="slide">
+						<img src="images/8.jpeg" class="slide">
+						<img src="images/9.jpeg" class="slide">
+						<img src="images/10.jpeg" class="slide">
+						<img src="images/11.jpeg" class="slide">
+					</div>
+				</div>
 
-      <button class="nav right" onclick="moveSlide(1)">❯</button>
-    </div>
-</section>
+				<button class="nav right" onclick="moveSlide(1)">
+					<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-right-icon lucide-chevron-right"><path d="m9 18 6-6-6-6"/></svg>
+				</button>
+			</div>
+	</section>
 
-<!-- ABOUT -->
-<section id="about" class="section">
-  <div class="container">
-    <h2>About WJI Telangana</h2>
+	<!-- ABOUT -->
+	<section id="about" class="section">
+		<div class="container">
+			<h2>About WJI Telangana</h2>
 
-    <p style="text-align: justify; margin-bottom: 40px;" >
-      WJI Telangana (Working Journalists of India, Telangana Chapter) is a professional organization 
-      dedicated to uniting, supporting, and empowering journalists across print, 
-      electronic, and digital media in the Telangana region. Committed to the principles of truth, 
-      transparency, and accountability, the organization works tirelessly to protect journalist rights, 
-      promote ethical journalism, and advocate for press freedom. Through various initiatives 
-      including press meets, training workshops, awareness campaigns, and welfare programs, 
-      WJI Telangana provides a strong support system for media professionals while fostering 
-      a united community that contributes to a fair and informed society. 
-      Led by a dedicated team of experienced journalists including President Rana Pratap, 
-      Hon'ble President Nandanam Krupakar, General Secretary Ravikanti Srinivas, and Advisor G. Valleeswar, 
-      the organization serves as a collective voice for journalists, ensuring their rights are 
-      protected and their contributions to democracy are recognized and valued.
-    </p>
-    
-    <div class="card-grid">
-      <div class="card">
-        <h3>Our Mission</h3>
-        <ul>
-          <li>Protect journalist rights</li>
-          <li>Promote ethical journalism</li>
-          <li>Support media professionals</li>
-          <li>Strengthen journalist voices</li>
-        </ul>
-      </div>
+			<p>
+				A professional body uniting journalists from print, electronic, and digital media,
+				committed to truth, transparency, and accountability.
+			</p>
 
-      <div class="card">
-        <h3>Our Vision</h3>
-        <p>
-          Build a united and independent journalist community contributing
-          to a fair and informed society.
-        </p>
-      </div>
-    </div>
-  </div>
-</section>
+			<div class="card-grid">
+				<div class="card">
+					<h3>Our Mission</h3>
+					<ul class="list">
+						<li>Protect journalist rights</li>
+						<li>Promote ethical journalism</li>
+						<li>Support media professionals</li>
+						<li>Strengthen journalist voices</li>
+					</ul>
+				</div>
 
+				<div class="card">
+					<h3>Our Vision</h3>
+					<p>
+						Build a united and independent journalist community contributing
+						to a fair and informed society.
+					</p>
+				</div>
+			</div>
+		</div>
+	</section>
 
 	<!-- ACTIVITIES -->
 	<section id="activities" class="section">
@@ -162,58 +144,22 @@
 						<td>Hyderabad</td>
 						<td>Media awareness program</td>
 					</tr>
-          <tr>
-						<td>19 Mar 2026</td>
-						<td>Ugadi Calender Release</td>
-						<td>Hyderabad</td>
-						<td>Festival</td>
-					</tr>
 				</table>
 			</div>
 		</div>
 	</section>
 
-<!-- MEMBERS -->
-<section id="members" class="section light">
-  <div class="container">
-    <h2>Members</h2>
-    
+	<!-- MEMBERS -->
+	<section id="members" class="section light">
+		<div class="container">
+			<h2>Members</h2>
 
-    <div class="card-grid">
-      <div class="card" style="text-align: center; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); padding: 20px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); margin: 10px; transition: transform 0.3s ease;" 
-     onmouseover="this.style.transform='translateY(-5px)'" 
-     onmouseout="this.style.transform='translateY(0)'">
-  <p style="font-weight: bold; font-size: 18px; color: white; margin: 0 0 8px 0;">Rana Pratap</p>
-  <p style="color: #f0f0f0; margin: 0;">President</p>
-</div>
-
-<div class="card" style="text-align: center; background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%); padding: 20px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); margin: 10px; transition: transform 0.3s ease;"
-     onmouseover="this.style.transform='translateY(-5px)'"
-     onmouseout="this.style.transform='translateY(0)'">
-  <p style="font-weight: bold; font-size: 18px; color: white; margin: 0 0 8px 0;">Nandanam Krupakar</p>
-  <p style="color: #f0f0f0; margin: 0;">Hon'ble President</p>
-</div>
-
-<div class="card" style="text-align: center; background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%); padding: 20px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); margin: 10px; transition: transform 0.3s ease;"
-     onmouseover="this.style.transform='translateY(-5px)'"
-     onmouseout="this.style.transform='translateY(0)'">
-  <p style="font-weight: bold; font-size: 18px; color: white; margin: 0 0 8px 0;">Ravikanti Srinivas</p>
-  <p style="color: #f0f0f0; margin: 0;">General Secretary</p>
-</div>
-
-<div class="card" style="text-align: center; background: linear-gradient(135deg, #fa709a 0%, #fee140 100%); padding: 20px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); margin: 10px; transition: transform 0.3s ease;"
-     onmouseover="this.style.transform='translateY(-5px)'"
-     onmouseout="this.style.transform='translateY(0)'">
-  <p style="font-weight: bold; font-size: 18px; color: white; margin: 0 0 8px 0;">G. Valleeswar</p>
-  <p style="color: #f0f0f0; margin: 0;">Advisor</p>
-</div>
-      <!-- <div class="card" style="text-align: center;"><p>Rana Pratap</p> <p>President</p></div>
-      <div class="card" style="text-align: center;"><p>Nandanam Krupakar</p> <p>Hon'ble President </p> </div>
-      <div class="card" style="text-align: center;"><p>Ravikanti Srinivas</p> <p>General Secretary</p></div>
-      <div class="card" style="text-align: center;"><p>G. Valleeswar</p> <p>Advisor</p></div> -->
-    </div>
-  </div>
-</section>
+			<div class="card-grid">
+				<div class="card">Ravi Kumar – Reporter</div>
+				<div class="card">Sita Devi – Editor</div>
+			</div>
+		</div>
+	</section>
 
 	<!-- CONTACT -->
 	<section id="contact" class="section">
@@ -221,7 +167,7 @@
 			<h2>Contact Us</h2>
 
 			<p><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg> Hyderabad, Telangana</p>
-			<p><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6A19.79 19.79 0 012.12 4.18 2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg> +91 98490 33410
+			<p><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6A19.79 19.79 0 012.12 4.18 2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg> +91 XXXXX XXXXX</p>
 			<p><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg> wji.telugu@gmail.com</p>
 		</div>
 	</section>
